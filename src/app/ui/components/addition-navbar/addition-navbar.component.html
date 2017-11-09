@@ -1,0 +1,29 @@
+<div class="navbar-wrap">
+  <div class="navbar-header">
+    <h4 class="h5">{{ title }}</h4>
+  </div>
+
+  <div class="navbar-content">
+    <div class="text-center mb-4">
+      <img src="assets/content/user.jpg" class="circle mb-3" alt="">
+      <button ni-button beforeIcon="fa fa-dropbox" block="true" outline="true" lineStyle="dashed">Load new avatar</button>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="mt-0">Skills</h5>
+      <h6 class="mb-1">Angular</h6>
+      <md-progress-bar mode="determinate" color="accent" [value]="98"></md-progress-bar>
+
+      <h6 class="mb-1">React</h6>
+      <md-progress-bar mode="determinate" color="accent" [value]="85"></md-progress-bar>
+
+      <h6 class="mb-1">Vue.js</h6>
+      <md-progress-bar mode="determinate" color="accent" [value]="40"></md-progress-bar>
+
+      <h6 class="mb-1">Backbone.js</h6>
+      <md-progress-bar mode="determinate" color="accent" [value]="38"></md-progress-bar>
+    </div>
+
+    <button ni-button afterIcon="fa fa-save" iconAnimation="true" block="true" type="success">Save</button>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+@import '../../../../assets/sass/variable';
+
+:host {
+  background: main-color(100);
+  bottom: 0;
+  color: main-contrast(100);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate(300px, 0);
+  transition: .2s transform 0s $animation;
+  width: 300px;
+  z-index: 9999;
+  @media #{$max543} {
+    transform: translate(270px, 0);
+    width: 270px;
+  }
+
+  .rtl & {
+    left: 0;
+    right: auto;
+    transform: translate(-300px, 0);
+    @media #{$max543} {
+      transform: translate(-270px, 0);
+    }
+  }
+  &.open {
+    transform: translate(0, 0);
+    transition: .2s transform 0s $animation;
+  }
+  .navbar-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    .navbar-header {
+      align-items: center;
+      background: main-color(200);
+      color: main-contrast(200);
+      display: flex;
+      height: $module-rem * 6;
+      padding: $module-rem ($module-rem * 2);
+    }
+    .navbar-content {
+      flex-grow: 1;
+      overflow: auto;
+      padding: ($module-rem * 2);
+      width: 100%;
+    }
+  }
+}

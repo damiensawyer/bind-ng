@@ -1,0 +1,191 @@
+// Material palettes:
+// $mat-red, $mat-pink, $mat-purple, $mat-deep-purple, $mat-indigo, $mat-blue, $mat-light-blue, $mat-cyan, $mat-teal,
+// $mat-green, $mat-light-green, $mat-lime, $mat-yellow, $mat-amber, $mat-orange, $mat-deep-orange, $mat-brown,
+// $mat-grey, $mat-blue-grey
+
+//Main palette
+$palette: (
+  50 : #f6f7fa,
+  100 : #e8ecf3,
+  200 : #d9dfeb,
+  300 : #cad2e2,
+  400 : #bec9dc,
+  500 : #b3bfd6,
+  600 : #acb9d1,
+  700 : #a3b1cc,
+  800 : #9aa9c6,
+  900 : #8b9bbc,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #e9f0ff,
+  A700 : #cfdfff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+@function main-color($key: $palette) {
+  @return map-get($palette, $key);
+}
+@function main-contrast($key: $palette) {
+  @return map-get(map-get($palette, contrast), $key);
+}
+
+//Accent palette
+$accent-palette: (
+  50 : #edf5fc,
+  100 : #d1e5f7,
+  200 : #b3d4f2,
+  300 : #95c2ec,
+  400 : #7eb5e8,
+  500 : #67a8e4,
+  600 : #5fa0e1,
+  700 : #5497dd,
+  800 : #4a8dd9,
+  900 : #397dd1,
+  A100 : #ffffff,
+  A200 : #e9f2ff,
+  A400 : #b6d5ff,
+  A700 : #9cc6ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+@function accent-color($key: $accent-palette) {
+  @return map-get($accent-palette, $key);
+}
+@function accent-contrast($key: $accent-palette) {
+  @return map-get(map-get($accent-palette, contrast), $key);
+}
+
+$success-color: #81C784;
+$success-contrast: #000;
+$info-color: #64B5F6;
+$info-contrast: #000;
+$warning-color: #FFB74D;
+$warning-contrast: #000;
+$error-color: #e24d4d;
+$error-contrast: #fff;
+
+//Main
+$mainBg: #f8f8f8;
+$main-fs: 13px;
+$main-ff: 'Source Sans Pro', sans-serif;
+$main-fw: 400;
+$module: 10px;
+$main-lh: ($module * 2 / $main-fs);
+$module-rem: ($module / $main-fs) * 1rem;
+$shape: 0;
+
+//Second
+$second-ff: 'Oxygen', sans-serif;
+
+//Animationng serve
+$animation: ease-in-out;
+
+//Media
+$max543 : only screen and (max-width: 543px);
+$min544 : only screen and (min-width: 544px);
+$max767 : only screen and (max-width: 767px);
+$min768 : only screen and (min-width: 768px);
+$max991 : only screen and (max-width: 991px);
+$min992 : only screen and (min-width: 992px);
+$max1199 : only screen and (max-width: 1199px);
+$min1200 : only screen and (min-width: 1200px);
+
+//Headers
+$headers-ff: $second-ff;
+$headers-fw: 700;
+
+//Top navbar
+$navbar-height: $module-rem * 7;
+$navbar-bg: main-color(100);
+$navbar-color: main-contrast(100);
+$navbar-icon-color: main-contrast(500);
+$navbar-icon-color-hover: accent-color(300);
+$navbar-dropdown-bg: main-color(100);
+$navbar-dropdown-bg-hover: main-color(200);
+$navbar-dropdown-color: main-contrast(100);
+$navbar-dropdown-color-hover: main-contrast(200);
+$navbar-dropdown-dark-bg: accent-color(300);
+
+//Vertical navbar
+$vertical-navbar-bg: main-color(100);
+$vertical-navbar-accent: accent-color(100);
+$vertical-navbar-width: $module-rem * 20;
+$vertical-navbar-compress-width: $module-rem * 6;
+
+//Menu
+$menu: (
+  accent-color: accent-color(500),
+
+  //item
+  item-color: main-contrast(100),
+  item-hover-color: accent-color(500),
+  item-active-color: accent-color(500),
+  item-group-color: main-color(300),
+  item-bg: transparent,
+  item-hover-bg: transparent,
+  item-active-bg: transparent,
+  item-group-bg-compress: main-color(200),
+
+  //separator
+  separator: main-color(300),
+
+  //icon
+  icon-color: inherit,
+  icon-hover-color: inherit,
+  icon-active-color: accent-color(500),
+  icon-br: 50%,
+
+  //badge
+  badge-color: rgba(accent-color(500),.2),
+  badge-bg: accent-color(500),
+
+  //sub
+  sub-bg: transparent,
+  sub-separator: main-color(300)
+);
+
+//Footer
+$footer-bg: main-color(100);
+$footer-color: main-contrast(100);
+
+//Card
+$card-header-bg: main-color(200);
+$card-header-color: main-contrast(200);
+
+//Preloader
+$loader-overlay-bg: main-color(100);
+$loader-colors: (
+  1: main-color(500),
+  2: accent-color(500),
+  3: main-color(900),
+  4: main-color(900),
+  5: main-color(900)
+);
