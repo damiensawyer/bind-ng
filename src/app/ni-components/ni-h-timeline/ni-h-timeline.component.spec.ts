@@ -1,17 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { NiHTimelineComponent } from './ni-h-timeline.component';
+import { NiHTimelineComponent } from "./ni-h-timeline.component";
 
-describe('NiHTimelineComponent', () => {
+describe("NiHTimelineComponent", () => {
   let component: NiHTimelineComponent;
   let fixture: ComponentFixture<NiHTimelineComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ NiHTimelineComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [NiHTimelineComponent]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NiHTimelineComponent);
@@ -19,7 +20,11 @@ describe('NiHTimelineComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should fail", () => {
+    expect(false).toBeTruthy();
   });
 });
